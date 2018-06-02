@@ -9,8 +9,6 @@ TrackLblCell::TrackLblCell(float x0, float y0, float sz):
     m_rect.setTopLeft(QPointF(x0, y0));
     m_rect.setBottomRight(QPointF(x0+m_sz, y0+m_sz));
 
-
-
     int r = (qrand() % 256);
     int g = (qrand() % 256);
     int b = (qrand() % 256);

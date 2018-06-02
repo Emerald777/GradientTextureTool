@@ -33,7 +33,6 @@ public:
 
 private:
     QColor m_main_col;
-   // QColor m_border_col;
 
     float m_x, m_y; /// координаты верхнего левого угла
     float m_sz;     /// размер (для квадратной ячейки)
