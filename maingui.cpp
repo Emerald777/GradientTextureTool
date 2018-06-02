@@ -4,6 +4,8 @@
 #include <QSizePolicy>
 
 
+/// Main module
+
 MainGUI::MainGUI(QWidget *parent) : QWidget(parent), output_img(NULL)
 {
     QTime midnight(0,0,0);
@@ -30,25 +32,10 @@ MainGUI::~MainGUI()
 
 void MainGUI::createGuiWindow()
 {
-    //QPixmap bkgnd(512,512);
-   // bkgnd.fill(QColor(Qt::blue));
-
     render_lbl = new QAdvTrackLabel(this);
-    //render_lbl->setScaledContents(true);
+
     render_lbl->resize(256, 256);
     render_lbl->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
-
-    //render_lbl->setFixedSize(512,512);
-    //render_lbl->setPixmap(bkgnd);
-
-    /*QPixmap *pxm = (QPixmap *)render_lbl->pixmap();
-
-    QPainter pntr;
-    pntr.begin(pxm);
-    pntr.setPen(QColor(Qt::white));
-    //pntr.drawImage(0,0, *m_grid_img);
-    pntr.drawLine(0,0, 20, 20);
-    pntr.end();*/
 
 
     /// --------------- Задать размеры изображения --------------
@@ -124,8 +111,6 @@ void MainGUI::createGuiWindow()
 
     /// ------------ Кнопка Сохранить -----------------
     QPushButton *bnSave = new QPushButton("Сохранить");
-
-
 
 
     QVBoxLayout *ctrl_layer = new QVBoxLayout(); /// слой для всей управлялки
